@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NEWS</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!--[if It IE 9]>
+  <script>
+  	document.createElement("article");
+  	document.createElement("aside");
+  	document.createElement("footer");
+  	document.createElement("header");
+  	document.createElement("main");
+  	document.createElement("nav");
+  	document.createElement("section");
+  </script>
+  <![endif]-->
+
+	<script src="lib.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+
+	function MouseOver() {
+		var sidebar2 = document.getElementById('sidebar2');
+		sidebar2.className = 'newStyle';
+		sidebar2.innerHTML = "<h2>Be yourself</h2><p>Always aim for the best!</p>"
+	}
+
+	function MouseOut(){
+		var sidebar2 = document.getElementById("sidebar2");
+		sidebar2.className = "defaultStyle";
+		sidebar2.innerHTML = "<h2>Be yourself</h2><p>See what can be shown here.</p>"
+	}
+
+
+	</script>	
+
+</head>
+<body>
+	<header class="banner">
+	<h1 id="headline">News</h1>
+	<p>Local and National News</p>
+	</header>
+
+	<NAV>
+		<ul>
+			<li><a href="home.html"  onmouseover="MouseOver()" onmouseout="MouseOut()">Home</a></li>
+			<li><a href="archive.html" onmouseover="MouseOver()" onmouseout="MouseOut()" >Archive</a></li>
+			<li><a href="About.html" onmouseover="MouseOver()" onmouseout="MouseOut()" >About</a></li>
+			<li><a href="newstest.html" onmouseover="MouseOver()" onmouseout="MouseOut()">Back</a></li>
+			<li><a id='more_info' onclick="myFunction()"  onmousedown="mouseDown()" onmouseup="mouseUp()" >More</a></li>
+		</ul>
+	</NAV>
+
+	<main>
+		<section>
+			<h2>Local News</h2>
+			<article>
+				<header>
+					<h3>Fire fighters rescue man from building</h3>
+				</header>
+				<p>(author,date)</p>
+				<p>This is the story text.This is the story text.</p>
+				<p>This is the story text.This is the story text.</p>
+			</article>
+
+			<article>
+			<header>
+				<h3>New Library to be built</h2>
+			</header>
+			<p>(author,date)</p>
+			<p>This is the story text.This is the story text.</p>
+			<p>This is the story text.This is the story text.</p>
+			</article>
+
+		</section>
+
+		<section>
+			<h2>National News</h2>
+			<article>
+				<header>
+					<h3>Snow storm is making travel difficult</h3>
+				</header>
+				<p>(author,date)</p>
+				<p>This is the story text.This is the story text.</p>
+				<p>This is the story text.This is the story text.</p>
+			</article>
+
+			<article>
+				<header><h3>Thousands are without power</h3></header>
+				<p>(author,date)</p>
+				<p>This is the story text.This is the story text.</p>
+				<p>This is the story text.This is the story text.</p>
+			</article>
+		</section>
+	</main>
+
+	<aside>
+		<h2>Be a new reporter</h2>
+		<P>If you see news happening - Send us a Text.</P>
+	</aside>
+		
+	<aside id='sidebar2'>
+		<h2>Be youself</h2>
+		<P>See what can be shown here. </P>
+	</aside>
+
+   <script type="text/javascript">
+	function myFunction() {
+		var x = document.getElementById("id1").value
+		if (x == "") {
+	     alert("Name must be filled out");}
+	    else
+	    {document.getElementById("sidebar2").innerHTML="<h2>Welcome</h2>" + id1.value + "<h2>!<h2>";
+		}
+
+	}
+	</script>
+
+
+	<aside>
+		 Name: 
+		<input id="id1" type="text">
+		<button onclick="myFunction()">submit</button>
+	</aside>
+
+
+	<footer id="footer_onclick" onclick="footer_onclick()">
+		<p>Footer Information</p>
+	</footer>
+
+</body>
+</html>
